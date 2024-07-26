@@ -1,0 +1,12 @@
+convert_numbers==0.4
+numpy==1.22.4
+opencv_python==4.10.0.84
+opencv_python_headless==4.10.0.84
+pandas==2.2.2
+Pillow==9.1.0
+Pillow==10.4.0
+pytesseract==0.3.10
+python-dotenv==1.0.1
+Requests==2.32.3
+selenium==4.22.0
+webdriver_manager==3.8.6
