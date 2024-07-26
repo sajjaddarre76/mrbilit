@@ -22,5 +22,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Copy .env file
+        run: |
+          echo "${{ secrets.ENV_CONTENT }}" > .env
+          
       - name: Run script
         run: python mrbilit.py
