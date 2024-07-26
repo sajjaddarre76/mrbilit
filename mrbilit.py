@@ -166,14 +166,16 @@ def wait_for_button_disappearance(button_locator, timeout=10):
 
 def Initialize_driver():
     # Path to your Chrome user data directory
-    user_data_dir = r"C:\Users\edr\Desktop\Projects and ideas\Ticket_Reservation_automation_project\mrbilit_bot\selenium-profile"
+    # user_data_dir = r"C:\Users\edr\Desktop\Projects and ideas\Ticket_Reservation_automation_project\mrbilit_bot\selenium-profile"
     chrome_options = Options()
-    chrome_options.add_argument(f"user-data-dir={user_data_dir}")
+    # chrome_options.add_argument(f"user-data-dir={user_data_dir}")
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
     chrome_options.add_argument('--ignore-certificate-errors')
     chrome_options.add_argument('--ignore-ssl-errors')
-    driver = webdriver.Chrome(service=ChromeService(driver_path), options=chrome_options)
+    # driver = webdriver.Chrome(service=ChromeService(driver_path), options=chrome_options)
+    service = ChromeService(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.maximize_window()
     return driver
 
